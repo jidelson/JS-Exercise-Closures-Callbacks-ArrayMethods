@@ -226,10 +226,12 @@ return newArrayFilter;
  * 
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
 */
-function stringSmash(/* code here */) {
-  /* code here */
+function stringSmash(fruits) {
+  let newArrayReduce = fruits.reduce(function(accumulator, currentValue){
+    return accumulator + currentValue
+  });
+return newArrayReduce.trim();
 }
-
 // A local community center is holding a fund raising 5k fun run and has invited
 // 50 small businesses to make a small donation on their behalf for some much needed
 // updates to their facilities. Each business has assigned a representative
@@ -266,9 +268,11 @@ return fullNames;
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
 function firstNamesAllCaps(runners) {
-  /* CODE HERE */
+  let upperCase = runners.map(function(item){
+    return `${item.first_name.toUpperCase()}`;
+})
+return upperCase;
 }
-
 /**
  * ### Challenge `getRunnersByTShirtSize`
  * * THIS IS A STRETCH PROBLEM! ATTEMPT ONLY AFTER COMPLETING ALL NON-STRETCH CHALLENGES!
