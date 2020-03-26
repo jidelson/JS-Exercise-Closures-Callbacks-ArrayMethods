@@ -316,10 +316,12 @@ function tallyUpDonations(/* CODE HERE */) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- * 
+ * counter1 uses a closure and counter2 does not.
  * 2. Which of the two uses a closure? How can you tell?
- * 
+ * counter1, because it is using a function nested in a different function above it.
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
+ * counter1 could be preferable if you need access to the outer scope of code from inside the scope. counter2 
+ * could be better if you aren't as worried as keeping the data private.
  *
 */
 
