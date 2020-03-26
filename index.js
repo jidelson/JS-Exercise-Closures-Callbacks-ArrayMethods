@@ -68,8 +68,7 @@ function processLength(list, callback) {
  * should return 'barbar'.
 */
 function processLastItem(stringList, callback) {
-  for (let i = 0; i <= stringList.length; i++);
-  return callback(stringList - 1);
+  return callback(stringList[stringList.length - 1]);
 }
 
 /**
@@ -157,8 +156,12 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * 
  * [2] Invoking `lowerCaseStrings` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
-function lowerCaseStrings(/* code here */) {
-  /* code here */
+function lowerCaseStrings(fruits) {
+  let lowerCase = []
+  fruits.forEach(function(fruit){
+    return lowerCase.push(fruit.toLowerCase());
+  })
+  return lowerCase;
 }
 
 /**
@@ -176,8 +179,15 @@ function lowerCaseStrings(/* code here */) {
  * 
  * [2] Invoking `isItAnApple` with `['a', 'b', 'c' ]` will return `[ false, false, false ]`.
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(fruits) {
+  const newArray = fruits.map(function(fruit){
+if (fruit === 'apple'){
+  return true;
+} else {
+  return false;
+}
+});
+return newArray;
 }
 
 /**
@@ -196,8 +206,9 @@ function isItAnApple(/* code here */) {
  * 
  * [2] Invoking `removeApple` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
-function removeApple(/* code here */) {
-  /* code here */
+function removeApple(fruits) {
+const newArrayFilter = fruits.filter(string => string !== 'apple');
+return newArrayFilter;
 }
 
 /**
@@ -234,8 +245,12 @@ function stringSmash(/* code here */) {
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
+function getFullNames(runners) {
+  let fullNames = runners.map(function(item){
+    return `${item.last_name}, ${item.first_name}`;
+
+  })
+return fullNames;
 }
 
 /**
@@ -250,7 +265,7 @@ function getFullNames(/* CODE HERE */) {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
+function firstNamesAllCaps(runners) {
   /* CODE HERE */
 }
 
